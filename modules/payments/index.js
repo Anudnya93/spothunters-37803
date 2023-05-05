@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Text, View, FlatList } from "react-native";
 import { OptionsContext } from "@options";
-import { StripeProvider } from "@stripe/stripe-react-native";
-import { CheckoutScreen } from "./checkout";
 import { fetchPaymentHistory } from "./api";
 
 const Payments = () => {
@@ -42,12 +40,12 @@ const Payments = () => {
 
   return (
     <View>
-      <StripeProvider
+      {/* <StripeProvider
         publishableKey={stripePublishKey}
         merchantIdentifier={merchantIdentifier}
       >
         <CheckoutScreen />
-      </StripeProvider>
+      </StripeProvider> */}
       <View>
         <Text
           style={{ marginHorizontal: 15, marginTop: 15, paddingBottom: 10 }}
